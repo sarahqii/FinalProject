@@ -6,10 +6,6 @@ package com.mycompany.finalprojectparti;
 import java.util.*;
 import java.io.*;
 
-/**
- *
- * @author chenhenr
- */
 public class Network {
     private Agent[] agents;
     private int agentNum;
