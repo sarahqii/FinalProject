@@ -4,10 +4,7 @@
  */
 package com.mycompany.finalprojectparti;
 import java.util.*;
-/**
- *
- * @author chenhenr
- */
+
 public class Agent {
     private int index;
     private int pairNum;
