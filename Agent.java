@@ -4,7 +4,10 @@
  */
 package com.mycompany.finalprojectparti;
 import java.util.*;
-
+/**
+ *
+ * @author chenhenr
+ */
 public class Agent {
     private int index;
     private int pairNum;
@@ -19,10 +22,11 @@ public class Agent {
         this.agentNum = agentNum;
         this.p = p;
     }
-    
+    /*
     public void ranPair(int i, Agent agenti){
         Random ran = new Random();
-        double ranN = ran.nextDouble(11)/10;
+        double ranN = ran.nextInt(11)/10.0;
+        //ranN = 1;
         if(index == i){
             return;
         }
@@ -31,7 +35,7 @@ public class Agent {
             pairAgents.add(i);
         }
         else{
-            if(ranN <= p){
+            if(ranN > p){
                 pairNum++;
                 pairAgents.add(i);
             }
@@ -40,6 +44,34 @@ public class Agent {
             }
         }
     }
+    */
+    public void ranPair(int i, Agent agenti){
+        Random ran = new Random();
+        double ranN = ran.nextInt(11)/10.0;
+        if(ranN > p){
+            pair(i, agenti);
+        }
+        else{ 
+            return;
+        }
+    }
+    
+    
+    public void pair(int i, Agent agenti){
+        if(index == i){
+            return;
+        }
+        if(agenti.checkPair(index)){
+            pairNum++;
+            pairAgents.add(i);
+        }
+        else{
+            pairNum++;
+            pairAgents.add(i);
+        }
+    }
+    
+    
     public boolean checkPair (int i){
         return pairAgents.contains(i);
     }
