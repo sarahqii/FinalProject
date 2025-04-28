@@ -4,10 +4,6 @@
 
 package com.mycompany.finalprojectparti;
 
-/**
- *
- * @author chenhenr
- */
 public class FinalProjectPartI {
 
     public static void main(String[] args) {
