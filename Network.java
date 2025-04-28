@@ -6,6 +6,10 @@ package com.mycompany.finalprojectparti;
 import java.util.*;
 import java.io.*;
 
+/**
+ *
+ * @author chenhenr
+ */
 public class Network {
     private Agent[] agents;
     private int agentNum;
@@ -24,7 +28,7 @@ public class Network {
     
     public void ranPair(){
         for(int i = 1; i <= agentNum; i++){
-            for(int j = i + 1; j <= agentNum; j++){
+            for(int j = 1; j <= agentNum; j++){
                 agents[i].ranPair(j, agents[j]);
             }
         }
