@@ -83,6 +83,10 @@ public class Agent {
         return pairAgents;
     }
     
+    public void unilateralPair(int i){
+        pairAgents.add(i);
+    }
+    
     public int getIndex(){
         return index;
     }
