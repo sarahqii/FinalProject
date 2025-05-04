@@ -10,13 +10,15 @@ import java.io.*;
  *
  * @author chenhenr
  */
+// Represents a network consisting of multiple agents.
+// Supports generation of example, random, and grid-based networks.
 public class Network {
     private Agent[] agents;
     private int agentNum;
     private double p;
     private Random ran;
     private int gridRow;
-    
+// Constructs a new network of agents.
     public Network(int agentNum, double p){
         this.agents = new Agent[agentNum + 1];
         for(int i = 1; i <= agentNum; i++){
@@ -27,7 +29,7 @@ public class Network {
         this.ran = new Random();
         gridRow = 0;
     }
-    
+// Randomly pairs agents with each other using the specified probability.
     public void ranPair(){
         for(int i = 1; i <= agentNum; i++){
             for(int j = 1; j <= agentNum; j++){
@@ -35,7 +37,7 @@ public class Network {
             }
         }
     }
-    
+// Prints all valid agent pairs to the console.
     public void printAllPairs(){
         for(int i = 1; i <= agentNum; i++){
             Agent agent = agents[i];
@@ -54,7 +56,7 @@ public class Network {
         }
     }
     
-    
+// Writes all agent pairs to a text file.
     public void writeToFile(String filename){
         try{
             PrintWriter writer = new PrintWriter(new FileWriter(filename));
@@ -80,7 +82,7 @@ public class Network {
             System.out.println("Failure in write in!" + e.getMessage());
         }
     }
-    
+// Determines the number of rows required for constructing a 2D lattice based on the total number of agents.
     public void makeGrid(){
         int remainder = agentNum % 3;
         if(remainder == 0){
