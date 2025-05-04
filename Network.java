@@ -39,7 +39,7 @@ public class Network {
     public void printAllPairs(){
         for(int i = 1; i <= agentNum; i++){
             Agent agent = agents[i];
-            ArrayList<Integer> pairs = agent.getPairs();
+            PriorityQueue<Integer> pairs = agent.getPairs();
             if(pairs.isEmpty()){
                 System.out.println(agent.getIndex() + " -1");
             }
@@ -60,7 +60,7 @@ public class Network {
             PrintWriter writer = new PrintWriter(new FileWriter(filename));
             for(int i = 1; i <= agentNum; i++){
                 Agent agent = agents[i];
-                ArrayList<Integer> pairs = agent.getPairs();
+                PriorityQueue<Integer> pairs = agent.getPairs();
                 if(pairs.isEmpty()){
                     writer.println(agent.getIndex() + " -1");
                 }
@@ -184,6 +184,5 @@ public class Network {
     
     public Agent getAgent(int i) {
         return agents[i];
-    }    
-    
+    }
 }
