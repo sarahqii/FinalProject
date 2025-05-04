@@ -8,6 +8,7 @@ import java.util.*;
  *
  * @author chenhenr
  */
+// Main method to run the program and prompt user interaction.
 public class FinalProjectPartI {
 
     public static void main(String[] args) {
@@ -24,7 +25,7 @@ public class FinalProjectPartI {
             System.out.println("Invalid number! Please enter another number: ");
             mode = in.nextInt();
         }
-        
+        // The user will choose between the three modes.
         if(mode == 1){
             System.out.println("Generating Network 1...");
             Network network = new Network(12, 1);
@@ -107,7 +108,7 @@ public class FinalProjectPartI {
         
         
     }
-    
+    // Adjusts the number of agents to be a multiple of 3 for lattice construction.
     public static int adjustAgentNum(int agentNum){
         int row = 0;
         int remainder = agentNum % 3;
