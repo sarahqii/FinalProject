@@ -69,6 +69,7 @@ public class FinalProjectPartI {
             agent.unilateralPair(9);
             
             network.printAllPairs();
+            network.writeToFile("output.txt");
 
         }
         else if(mode == 2){
@@ -87,6 +88,7 @@ public class FinalProjectPartI {
             Network network = new Network(N, p);
             network.ranPair();
             network.printAllPairs();
+            network.writeToFile("output.txt");
         }
         else if(mode == 3){
             System.out.println("Enter number of agents in the range of [9, 1000]");
@@ -99,6 +101,7 @@ public class FinalProjectPartI {
             Network network = new Network(N, 1.0);
             network.gridPair();
             network.printAllPairs();
+            network.writeToFile("output.txt");
         
         }
         
