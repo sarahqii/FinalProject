@@ -11,14 +11,14 @@ import java.util.*;
 public class Agent {
     private int index;
     private int pairNum;
-    private ArrayList<Integer> pairAgents;
+    private PriorityQueue<Integer> pairAgents;
     private int agentNum;
     private double p;
 
     public Agent(int index, int pairNum, int agentNum, double p){
         this.index = index;
         this.pairNum = pairNum;
-        this.pairAgents = new ArrayList<>();
+        this.pairAgents = new PriorityQueue<>();
         this.agentNum = agentNum;
         this.p = p;
     }
@@ -68,6 +68,7 @@ public class Agent {
         else{
             pairNum++;
             pairAgents.add(i);
+            agenti.getPairs().add(index);
         }
     }
     
@@ -79,7 +80,7 @@ public class Agent {
         return this;
     }
     
-    public ArrayList<Integer> getPairs(){
+    public PriorityQueue<Integer> getPairs(){
         return pairAgents;
     }
     
