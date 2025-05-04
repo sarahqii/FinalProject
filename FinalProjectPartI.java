@@ -8,8 +8,13 @@ import java.util.*;
  *
  * @author chenhenr
  */
+/* Main driver class for the Network Generator program.
+   Allows user to choose between three network generation modes:
+   - A predefined example network
+   - A randomly generated network
+   - A regular 2D4N lattice network */
 public class FinalProjectPartI {
-
+// Main method to run the program and prompt user interaction.
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Welcome to the Network Generator");
@@ -107,7 +112,7 @@ public class FinalProjectPartI {
         
         
     }
-    
+// Adjusts the number of agents to be a multiple of 3 for lattice construction.
     public static int adjustAgentNum(int agentNum){
         int row = 0;
         int remainder = agentNum % 3;
